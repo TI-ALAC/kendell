@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("Akira Expanded Demo.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.scoreboard {
+  --kendall-red: #b91c22;
+  --tiempo-top: 35.95%;
+  --tiempo-width: 44%;
+  --tiempo-height: 8%;
+  --bandera-local-x: 10.9%;
+  --bandera-visitante-x: 89.1%;
+  --bandera-y: 60.3%;
+  --bandera-width: 12.5%;
+  --bandera-height: 14%;
+
+  /* Marcadores como Ejemplo.png (centro del cuadro rojo) */
+  --goles-local-x: 30.13%;
+  --goles-visitante-x: 68.75%;
+  --goles-y: 56.85%;
+
+  --tiempo-font: clamp(8px, 2.35cqi, 22px);
+  --goles-font: clamp(36px, 19cqi, 110px);
+  --bandera-radius: 18%;
+
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  container-type: inline-size;
+  overflow: hidden;
+}
+
+.scoreboard__base {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.scoreboard__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.scoreboard__tiempo-wrap {
+  position: absolute;
+  left: 50%;
+  top: var(--tiempo-top);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tiempo-width);
+  height: var(--tiempo-height);
+  background: var(--kendall-red);
+}
+
+.scoreboard__tiempo {
+  color: #fff;
+  font-family: "Akira Expanded", "Arial Black", sans-serif;
+  font-size: var(--tiempo-font);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.scoreboard__marcador {
+  position: absolute;
+  inset: 0;
+}
+
+.scoreboard__bandera {
+  position: absolute;
+  width: var(--bandera-width);
+  height: var(--bandera-height);
+  object-fit: cover;
+  border-radius: var(--bandera-radius);
+}
+
+.scoreboard__bandera--local {
+  left: var(--bandera-local-x);
+  top: var(--bandera-y);
+  transform: translate(-50%, -50%);
+}
+
+.scoreboard__bandera--visitante {
+  left: var(--bandera-visitante-x);
+  top: var(--bandera-y);
+  transform: translate(-50%, -50%);
+}
+
+.scoreboard__goles {
+  position: absolute;
+  top: var(--goles-y);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Akira Expanded", "Arial Black", sans-serif;
+  font-size: var(--goles-font);
+  font-weight: 700;
+  line-height: 0.85;
+  text-align: center;
+  width: 10%;
+}
+
+.scoreboard__goles--local {
+  left: var(--goles-local-x);
+}
+
+.scoreboard__goles--visitante {
+  left: var(--goles-visitante-x);
+}
+
+@media (width: 768px) and (height: 420px) {
+  .scoreboard {
+      --bandera-y: 68.5%;
+      --bandera-width: 11.8%;
+      --bandera-height: 23.2%;
+      --goles-y: 68.9%;
+      --goles-local-x: 29.1%;
+      --goles-visitante-x: 64.8%;
+      --tiempo-font: 20px;
+      --goles-font: 136px;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kendall - Marcador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="scoreboard">
+    <img
+      src="Base%20marcador%20final.png"
+      alt="Marcador Kendall"
+      class="scoreboard__base"
+      width="3198"
+      height="1331"
+    >
+
+    <div class="scoreboard__overlay">
+      <div class="scoreboard__tiempo-wrap">
+        <p class="scoreboard__tiempo" id="tiempo">PRIMER TIEMPO</p>
+      </div>
+
+      <div class="scoreboard__marcador">
+        <img class="scoreboard__bandera scoreboard__bandera--local" id="bandera-local" alt="Equipo local">
+        <span class="scoreboard__goles scoreboard__goles--local" id="goles-local">0</span>
+        <span class="scoreboard__goles scoreboard__goles--visitante" id="goles-visitante">0</span>
+        <img class="scoreboard__bandera scoreboard__bandera--visitante" id="bandera-visitante" alt="Equipo visitante">
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
