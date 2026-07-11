@@ -28,21 +28,17 @@ body {
   --tiempo-top: 35.95%;
   --tiempo-width: 44%;
   --tiempo-height: 8%;
-  --bandera-local-x: 10.9%;
-  --bandera-visitante-x: 89.1%;
-  --bandera-y: 60.3%;
+  --bandera-local-x: 9.9%;
+  --bandera-visitante-x: 90.1%;
+  --bandera-y: 67.3%;
   --bandera-width: 12.5%;
-  --bandera-height: 14%;
-
-  /* Marcadores como Ejemplo.png (centro del cuadro rojo) */
+  --bandera-height: 26%;
   --goles-local-x: 30.13%;
   --goles-visitante-x: 68.75%;
-  --goles-y: 56.85%;
-
+  --goles-y: 67.85%;
   --tiempo-font: clamp(8px, 2.35cqi, 22px);
   --goles-font: clamp(36px, 19cqi, 110px);
   --bandera-radius: 18%;
-
   position: fixed;
   inset: 0;
   width: 100%;
@@ -141,7 +137,7 @@ body {
   .scoreboard {
       --bandera-y: 68.5%;
       --bandera-width: 11.8%;
-      --bandera-height: 23.2%;
+      --bandera-height: 25.2%;
       --goles-y: 68.9%;
       --goles-local-x: 29.1%;
       --goles-visitante-x: 64.8%;
