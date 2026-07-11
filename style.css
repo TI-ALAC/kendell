@@ -37,7 +37,7 @@ body {
   --goles-visitante-x: 68.75%;
   --goles-y: 67.85%;
   --tiempo-font: clamp(8px, 2.35cqi, 22px);
-  --goles-font: clamp(36px, 19cqi, 110px);
+  --goles-font: 136px;
   --bandera-radius: 18%;
   position: fixed;
   inset: 0;
