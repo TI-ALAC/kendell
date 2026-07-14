@@ -36,12 +36,12 @@ body {
   --goles-local-x: 30.13%;
   --goles-visitante-x: 68.75%;
   --goles-y: 67.85%;
-  --nombre-local-x: 31.8%;
-  --nombre-visitante-x: 66.6%;
-  --nombre-y: 90.1%;
+        --nombre-local-x: 32.1%;
+        --nombre-visitante-x: 67.8%;
+        --nombre-y: 94%;
   --tiempo-font: clamp(8px, 2.35cqi, 22px);
   --goles-font: 136px;
-  --nombre-font: clamp(10px, 1.55cqi, 52px);
+        --nombre-font: 20px;
   --bandera-radius: 18%;
   position: fixed;
   inset: 0;
