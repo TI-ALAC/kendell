@@ -1,4 +1,4 @@
-const API_URL = "https://alacapipollamundialista.alacoohperu.pe/api/public/partidos?id=107";
+const API_URL = "https://alacapipollamundialista.alacoohperu.pe/api/public/partidos?id=109";
 const POLL_INTERVAL_MS = 15000;
 
 const tiempoEl = document.getElementById("tiempo");
