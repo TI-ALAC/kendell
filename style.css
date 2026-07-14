@@ -36,8 +36,12 @@ body {
   --goles-local-x: 30.13%;
   --goles-visitante-x: 68.75%;
   --goles-y: 67.85%;
+  --nombre-local-x: 31.8%;
+  --nombre-visitante-x: 66.6%;
+  --nombre-y: 90.1%;
   --tiempo-font: clamp(8px, 2.35cqi, 22px);
   --goles-font: 136px;
+  --nombre-font: clamp(10px, 1.55cqi, 52px);
   --bandera-radius: 18%;
   position: fixed;
   inset: 0;
@@ -133,15 +137,42 @@ body {
   left: var(--goles-visitante-x);
 }
 
+.scoreboard__nombre {
+  position: absolute;
+  top: var(--nombre-y);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Akira Expanded", "Arial Black", sans-serif;
+  font-size: var(--nombre-font);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.scoreboard__nombre--local {
+  left: var(--nombre-local-x);
+}
+
+.scoreboard__nombre--visitante {
+  left: var(--nombre-visitante-x);
+}
+
 @media (width: 768px) and (height: 420px) {
-  .scoreboard {
-      --bandera-y: 68.5%;
-      --bandera-width: 11.8%;
-      --bandera-height: 25.2%;
-      --goles-y: 68.9%;
-      --goles-local-x: 29.1%;
-      --goles-visitante-x: 64.8%;
-      --tiempo-font: 20px;
-      --goles-font: 136px;
-  }
+    .scoreboard {
+        --bandera-y: 68.5%;
+        --bandera-width: 11.8%;
+        --bandera-height: 23.2%;
+        --goles-y: 68.9%;
+        --goles-local-x: 29.1%;
+        --goles-visitante-x: 64.8%;
+        --nombre-local-x: 32.1%;
+        --nombre-visitante-x: 66.8%;
+        --nombre-y: 92%;
+        --tiempo-font: 20px;
+        --goles-font: 136px;
+        --nombre-font: 20px;
+    }
 }

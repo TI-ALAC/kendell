@@ -6,6 +6,8 @@ const banderaLocalEl = document.getElementById("bandera-local");
 const banderaVisitanteEl = document.getElementById("bandera-visitante");
 const golesLocalEl = document.getElementById("goles-local");
 const golesVisitanteEl = document.getElementById("goles-visitante");
+const nombreLocalEl = document.getElementById("nombre-local");
+const nombreVisitanteEl = document.getElementById("nombre-visitante");
 
 const TIEMPO_POR_CODIGO = {
   NS: "PRIMER TIEMPO",
@@ -51,6 +53,9 @@ function actualizarMarcador(partido) {
 
   banderaVisitanteEl.src = partido.visitante.bandera_url;
   banderaVisitanteEl.alt = partido.visitante.nombre;
+
+  nombreLocalEl.textContent = partido.local.nombre || "";
+  nombreVisitanteEl.textContent = partido.visitante.nombre || "";
 
   golesLocalEl.textContent = obtenerGoles(partido.marcador?.local);
   golesVisitanteEl.textContent = obtenerGoles(partido.marcador?.visitante);
